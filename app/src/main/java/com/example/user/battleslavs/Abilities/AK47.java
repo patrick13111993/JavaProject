@@ -6,33 +6,30 @@ import java.lang.Math;
 /**
  * Created by user on 16/12/2016.
  */
-public class CommunistRegime implements Abilitable {
+public class AK47 implements Abilitable {
 
-    private int attackMod;
+    private int damage;
     private int defenceMod;
     private double accuracy;
     private double crit;
 
-    public CommunistRegime() {
-        attackMod = 10;
-        defenceMod = 10;
-        accuracy = 0.65;
+    public Ak47() {
+        damage = 40;
+        accuracy = 0.35;
         crit = 0.05;
     }
 
     public String activate(Slav target) {
-        String msg = "The regime was successul";
+        String msg = "Take that you capitalist pigdog";
         double rand = Math.random();
-        if (rand > accuracy) msg = "The revolution was unsuccessful";
+        if (rand > accuracy) msg = "Too much vodka comrade, try aiming next time";
         if (rand < crit) {
-            attackMod *= 1.5;
-            defenceMod *= 1.5;
-            msg = "Glorious revolution";
+            damage *= 1.5;
+            msg = "Right in the gulag";
         }
-        target.attackModifier(attackMod);
+        target.takeDamage(damage);
         target.defenceModifier(defenceMod);
-        attackMod = 10;
-        defenceMod = 10;
+        damage = 40;
         return msg;
     }
 }
