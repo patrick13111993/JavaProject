@@ -8,21 +8,21 @@ import java.lang.Math;
  */
 public class AK47 implements Abilitable {
 
-    private int damage;
-    private int defenceMod;
+    private double damage;
+    private double defenceMod;
     private double accuracy;
     private double crit;
 
-    public Ak47() {
+    public AK47() {
         damage = 40;
         accuracy = 0.35;
         crit = 0.05;
     }
 
-    public String activate(Slav target) {
+    public String activate(Slavable target) {
         String msg = "Take that you capitalist pigdog";
         double rand = Math.random();
-        if (rand > accuracy) msg = "Too much vodka comrade, try aiming next time";
+        if (rand > accuracy) msg = "Too much vodka comrade, you kill Boris the bear by mistake";
         if (rand < crit) {
             damage *= 1.5;
             msg = "Right in the gulag";

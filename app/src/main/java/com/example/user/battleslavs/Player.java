@@ -6,7 +6,7 @@ package com.example.user.battleslavs;
 public class Player {
 
     private String name;
-    private Slav slav;
+    private Slavable slavable;
 
     public Player() {
     }
@@ -15,8 +15,8 @@ public class Player {
         this.name = name;
     }
 
-    public void assignSlav(Slav slav) {
-        this.slav = slav;
+    public void assignSlav(Slavable slavable) {
+        this.slavable = slavable;
     }
 
 

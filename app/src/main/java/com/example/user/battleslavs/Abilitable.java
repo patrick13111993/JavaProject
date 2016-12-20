@@ -5,5 +5,5 @@ package com.example.user.battleslavs;
  */
 public interface Abilitable {
 
-    public String activate(Slav target);
+    public String activate(Slavable target);
 }

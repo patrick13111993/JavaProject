@@ -8,19 +8,19 @@ import java.lang.Math;
  */
 public class ShoutObscenities implements Abilitable {
 
-    private int damage;
-    private int attackMod;
+    private double damage;
+    private double attackMod;
     private double accuracy;
     private double crit;
 
     public ShoutObscenities() {
-        damage = 5;
-        attackMod = -6;
+        damage = 15;
+        attackMod = -5;
         accuracy = 0.95;
         crit = 0.05;
     }
 
-    public String activate(Slav target) {
+    public String activate(Slavable target) {
         String msg = "Kurwa! Blyat! Cyka!";
         double rand = Math.random();
         if (rand > accuracy) msg = "The attack missed!";
@@ -30,7 +30,7 @@ public class ShoutObscenities implements Abilitable {
         }
         target.takeDamage(damage);
         target.attackModifier(attackMod);
-        damage = 12;
+        damage = 15;
         return msg;
     }
 }

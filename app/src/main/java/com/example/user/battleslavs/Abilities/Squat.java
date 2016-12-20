@@ -8,19 +8,19 @@ import java.lang.Math;
  */
 public class Squat implements Abilitable {
 
-    private int healing;
-    private int defenceMod;
+    private double healing;
+    private double defenceMod;
     private double accuracy;
     private double crit;
 
     public Squat() {
         healing = 20;
-        defenceMod = 4;
+        defenceMod = 6;
         accuracy = 1;
         crit = 0.05;
     }
 
-    public String activate(Slav target) {
+    public String activate(Slavable target) {
         String msg = "Heels on ground";
         double rand = Math.random();
         if (rand > accuracy) msg = "This should never happen!";

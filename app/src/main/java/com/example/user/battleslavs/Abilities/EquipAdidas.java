@@ -6,33 +6,33 @@ import java.lang.Math;
 /**
  * Created by user on 16/12/2016.
  */
-public class CommunistRegime implements Abilitable {
+public class EquipAdidas implements Abilitable {
 
+    private double healing;
     private double attackMod;
-    private double defenceMod;
     private double accuracy;
     private double crit;
 
-    public CommunistRegime() {
-        attackMod = 10;
-        defenceMod = 10;
-        accuracy = 0.65;
+    public EquipAdidas() {
+        healing = 16;
+        attackMod = 6;
+        accuracy = 1;
         crit = 0.05;
     }
 
     public String activate(Slavable target) {
-        String msg = "The regime was successul";
+        String msg = "You equip glorious tracksuit";
         double rand = Math.random();
-        if (rand > accuracy) msg = "The revolution was unsuccessful";
+        if (rand > accuracy) msg = "If this message appears something is fundamentally wrong with my code";
         if (rand < crit) {
+            healing *= 1.5;
             attackMod *= 1.5;
-            defenceMod *= 1.5;
-            msg = "Glorious revolution";
+            msg = "Babushka blesses you with one extra stripe";
         }
+        target.receiveHealing(healing);
         target.attackModifier(attackMod);
-        target.defenceModifier(defenceMod);
-        attackMod = 10;
-        defenceMod = 10;
+        healing = 16;
+        attackMod = 6;
         return msg;
     }
 }

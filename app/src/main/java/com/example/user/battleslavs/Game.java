@@ -20,8 +20,8 @@ public class Game {
         player.assignName(name);
     }
 
-    public void assignPlayerSlav(Player player, Slav slav) {
-        player.assignSlav(slav);
+    public void assignPlayerSlav(Player player, Slavable slavable) {
+        player.assignSlav(slavable);
     }
 
 

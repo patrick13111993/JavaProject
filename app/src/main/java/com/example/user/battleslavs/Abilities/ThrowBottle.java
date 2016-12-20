@@ -8,19 +8,19 @@ import java.lang.Math;
  */
 public class ThrowBottle implements Abilitable {
 
-    private int damage;
-    private int defenceMod;
+    private double damage;
+    private double defenceMod;
     private double accuracy;
     private double crit;
 
     public ThrowBottle() {
-        damage = 12;
+        damage = 16;
         defenceMod = -4;
         accuracy = 0.85;
         crit = 0.05;
     }
 
-    public String activate(Slav target) {
+    public String activate(Slavable target) {
         String msg = "The bottle smashes, dealing damage and lowering your opponent's defence";
         double rand = Math.random();
         if (rand > accuracy) msg = "The attack missed!";
@@ -30,7 +30,7 @@ public class ThrowBottle implements Abilitable {
         }
         target.takeDamage(damage);
         target.defenceModifier(defenceMod);
-        damage = 12;
+        damage = 16;
         return msg;
     }
 }
