@@ -12,13 +12,20 @@ public class Player {
     }
 
     public void assignName(String name) {
+
         this.name = name;
     }
 
     public void assignSlav(Slavable slavable) {
+
         this.slavable = slavable;
     }
 
+    public String returnName() {
+        return name;
+    }
 
-
+    public Slavable returnSlav() {
+        return slavable;
+    }
 }
