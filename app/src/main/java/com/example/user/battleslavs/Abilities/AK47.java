@@ -9,14 +9,15 @@ import java.lang.Math;
 public class AK47 implements Abilitable {
 
     private double damage;
-    private double defenceMod;
     private double accuracy;
     private double crit;
+    private String name;
 
     public AK47() {
         damage = 40;
         accuracy = 0.35;
         crit = 0.05;
+        name = "AK47";
     }
 
     public String activate(Slavable target) {
@@ -28,8 +29,11 @@ public class AK47 implements Abilitable {
             msg = "Right in the gulag";
         }
         target.takeDamage(damage);
-        target.defenceModifier(defenceMod);
         damage = 40;
         return msg;
+    }
+
+    public String returnName() {
+        return name;
     }
 }

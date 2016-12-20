@@ -1,5 +1,6 @@
 package com.example.user.battleslavs;
 
+import com.example.user.battleslavs.Abilities.*;
 import com.example.user.battleslavs.Abilities.TestAbility;
 import com.example.user.battleslavs.Slavs.*;
 
@@ -18,9 +19,11 @@ public class AbilityTest {
     TestAbility test;
     Piotr piotr;
     Vlad vlad;
+    AK47 ak47;
 
     @Before
     public void before() {
+        ak47 = new AK47();
         test = new TestAbility();
         piotr = new Piotr();
         piotr.setup();
@@ -36,5 +39,11 @@ public class AbilityTest {
     @Test
     public void testMessage() {
         assertEquals("Take that you capitalist pigdog", test.activate(vlad));
+    }
+
+    @Test
+    public void testName() {
+        String name = ak47.returnName();
+        assertEquals("AK47", name);
     }
 }

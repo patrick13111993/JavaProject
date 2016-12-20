@@ -12,12 +12,14 @@ public class EquipAdidas implements Abilitable {
     private double attackMod;
     private double accuracy;
     private double crit;
+    private String name;
 
     public EquipAdidas() {
         healing = 16;
         attackMod = 6;
         accuracy = 1;
         crit = 0.05;
+        name = "EquipAdidas";
     }
 
     public String activate(Slavable target) {
@@ -34,5 +36,9 @@ public class EquipAdidas implements Abilitable {
         healing = 16;
         attackMod = 6;
         return msg;
+    }
+
+    public String returnName() {
+        return name;
     }
 }

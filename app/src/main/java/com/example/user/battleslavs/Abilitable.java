@@ -6,4 +6,6 @@ package com.example.user.battleslavs;
 public interface Abilitable {
 
     public String activate(Slavable target);
+
+    public String returnName();
 }

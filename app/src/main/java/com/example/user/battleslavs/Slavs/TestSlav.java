@@ -37,6 +37,10 @@ public class TestSlav implements Slavable {
         return hitpoints;
     }
 
+    public boolean isConscious () {
+        return hitpoints > 0;
+    }
+
     public void takeDamage(double damage) {
         this.hitpoints -= damage;
     }
@@ -53,5 +57,7 @@ public class TestSlav implements Slavable {
         this.defence += mod;
     }
 
-
+    public ArrayList<Abilitable> returnAbilities(){
+        return abilities;
+    }
 }

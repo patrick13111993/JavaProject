@@ -12,12 +12,14 @@ public class CommunistRegime implements Abilitable {
     private double defenceMod;
     private double accuracy;
     private double crit;
+    private String name;
 
     public CommunistRegime() {
         attackMod = 10;
         defenceMod = 10;
         accuracy = 0.65;
         crit = 0.05;
+        name = "CommunistRegime";
     }
 
     public String activate(Slavable target) {
@@ -34,5 +36,9 @@ public class CommunistRegime implements Abilitable {
         attackMod = 10;
         defenceMod = 10;
         return msg;
+    }
+
+    public String returnName() {
+        return name;
     }
 }

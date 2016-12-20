@@ -23,6 +23,24 @@ public class Vlad implements Slavable {
         abilities.add(ability);
     }
 
+    public void setup() {
+        this.assignAbility(new CommunistRegime());
+        this.assignAbility(new EquipAdidas());
+        this.assignAbility(new AK47());
+        this.assignAbility(new ShoutObscenities());
+        hitpoints = 240;
+        attack = 18;
+        defence = 18;
+    }
+
+    public double returnHitpoints() {
+        return hitpoints;
+    }
+
+    public boolean isConscious () {
+        return hitpoints > 0;
+    }
+
     public void takeDamage(double damage) {
         this.hitpoints -= damage;
     }
@@ -39,13 +57,7 @@ public class Vlad implements Slavable {
         this.defence += mod;
     }
 
-    public void setup() {
-        this.assignAbility(new CommunistRegime());
-        this.assignAbility(new EquipAdidas());
-        this.assignAbility(new AK47());
-        this.assignAbility(new ShoutObscenities());
-        hitpoints = 240;
-        attack = 18;
-        defence = 18;
+    public ArrayList<Abilitable> returnAbilities(){
+        return abilities;
     }
 }

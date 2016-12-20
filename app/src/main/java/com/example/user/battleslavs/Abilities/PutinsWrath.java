@@ -13,6 +13,7 @@ public class PutinsWrath implements Abilitable {
     private double attackMod;
     private double accuracy;
     private double crit;
+    private String name;
 
     public PutinsWrath() {
         damage = 26;
@@ -20,6 +21,7 @@ public class PutinsWrath implements Abilitable {
         defenceMod = 4;
         accuracy = 0.50;
         crit = 0.05;
+        name = "PutinsWrath";
     }
 
     public String activate(Slavable target) {
@@ -32,7 +34,12 @@ public class PutinsWrath implements Abilitable {
         }
         target.takeDamage(damage);
         target.defenceModifier(defenceMod);
+        target.attackModifier(attackMod);
         damage = 40;
         return msg;
+    }
+
+    public String returnName() {
+        return name;
     }
 }

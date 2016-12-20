@@ -39,4 +39,9 @@ public class SlavTest {
         ability.activate(piotr);
         assertEquals(160.0, piotr.returnHitpoints());
     }
+
+    @Test
+    public void testIsConscious() {
+        assertEquals(true, testslav.isConscious());
+    }
 }
