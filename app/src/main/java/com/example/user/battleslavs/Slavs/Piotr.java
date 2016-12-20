@@ -15,7 +15,7 @@ public class Piotr implements Slavable {
     private double attack;
     private double defence;
 
-    public Piotr(ArrayList<Abilitable> abilities, double hitpoints, double attack, double defence) {
+    public Piotr() {
         this.abilities = abilities;
         this.hitpoints = hitpoints;
         this.attack = attack;
@@ -24,6 +24,20 @@ public class Piotr implements Slavable {
 
     public void assignAbility(Abilitable ability) {
         abilities.add(ability);
+    }
+
+    public void setup() {
+        this.assignAbility(new ThrowBottle());
+        this.assignAbility(new Squat());
+        this.assignAbility(new PutinsWrath());
+        this.assignAbility(new Gulag());
+        hitpoints = 200;
+        attack = 20;
+        defence = 20;
+    }
+
+    public double returnHitpoints() {
+        return hitpoints;
     }
 
     public void takeDamage(double damage) {
@@ -42,13 +56,5 @@ public class Piotr implements Slavable {
         this.defence += mod;
     }
 
-    public void setup() {
-        this.assignAbility(new ThrowBottle());
-        this.assignAbility(new Squat());
-        this.assignAbility(new PutinsWrath());
-        this.assignAbility(new Gulag());
-        hitpoints = 200;
-        attack = 20;
-        defence = 20;
-    }
+
 }
