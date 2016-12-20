@@ -10,16 +10,13 @@ import java.util.ArrayList;
 public class Vlad implements Slavable {
 
 
-    private ArrayList<Abilitable> abilities;
+    public ArrayList<Abilitable> abilities;
     private double hitpoints;
     private double attack;
     private double defence;
 
-    public Vlad(ArrayList<Abilitable> abilities, double hitpoints, double attack, double defence) {
-        this.abilities = abilities;
-        this.hitpoints = hitpoints;
-        this.attack = attack;
-        this.defence = defence;
+    public Vlad() {
+        this.abilities = new ArrayList<Abilitable>();
     }
 
     public void assignAbility(Abilitable ability) {

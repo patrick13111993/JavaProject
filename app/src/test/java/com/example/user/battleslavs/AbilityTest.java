@@ -1,5 +1,6 @@
 package com.example.user.battleslavs;
 
+import com.example.user.battleslavs.Abilities.TestAbility;
 import com.example.user.battleslavs.Slavs.*;
 
 import org.junit.Before;
@@ -12,31 +13,28 @@ import static junit.framework.Assert.assertEquals;
 /**
  * Created by user on 20/12/2016.
  */
-public class SlavTest {
+public class AbilityTest {
 
+    TestAbility test;
     Piotr piotr;
     Vlad vlad;
-    TestSlav testslav;
 
     @Before
     public void before() {
+        test = new TestAbility();
         piotr = new Piotr();
         piotr.setup();
         vlad = new Vlad();
-        vlad.setup();
-        testslav = new TestSlav();
-        testslav.setup();
     }
 
     @Test
-    public void testPiotrHitpoints() {
-        assertEquals(200.0, piotr.returnHitpoints());
-    }
-
-    @Test
-    public void testCanUseAbilities() {
-        Abilitable ability = testslav.abilities.get(0);
-        ability.activate(piotr);
+    public void testDamage() {
+        test.activate(piotr);
         assertEquals(160.0, piotr.returnHitpoints());
+    }
+
+    @Test
+    public void testMessage() {
+        assertEquals("Take that you capitalist pigdog", test.activate(vlad));
     }
 }
