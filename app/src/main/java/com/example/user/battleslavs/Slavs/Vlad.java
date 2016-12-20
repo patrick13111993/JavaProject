@@ -7,7 +7,7 @@ import java.util.ArrayList;
 /**
  * Created by user on 20/12/2016.
  */
-public class Piotr implements Slavable {
+public class Vlad implements Slavable {
 
 
     private ArrayList<Abilitable> abilities;
@@ -15,7 +15,7 @@ public class Piotr implements Slavable {
     private double attack;
     private double defence;
 
-    public Piotr(ArrayList<Abilitable> abilities, double hitpoints, double attack, double defence) {
+    public Vlad(ArrayList<Abilitable> abilities, double hitpoints, double attack, double defence) {
         this.abilities = abilities;
         this.hitpoints = hitpoints;
         this.attack = attack;
@@ -43,12 +43,12 @@ public class Piotr implements Slavable {
     }
 
     public void setup() {
-        this.assignAbility(new ThrowBottle());
-        this.assignAbility(new Squat());
-        this.assignAbility(new PutinsWrath());
-        this.assignAbility(new Gulag());
-        hitpoints = 200;
-        attack = 20;
-        defence = 20;
+        this.assignAbility(new CommunistRegime());
+        this.assignAbility(new EquipAdidas());
+        this.assignAbility(new AK47());
+        this.assignAbility(new ShoutObscenities());
+        hitpoints = 240;
+        attack = 18;
+        defence = 18;
     }
 }

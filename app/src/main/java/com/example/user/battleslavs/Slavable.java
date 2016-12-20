@@ -17,4 +17,6 @@ public interface Slavable {
     public void attackModifier(double mod);
 
     public void defenceModifier(double mod);
+
+    public void setup();
 }
