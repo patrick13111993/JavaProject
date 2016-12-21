@@ -14,8 +14,10 @@ public class Piotr implements Slavable {
     private double hitpoints;
     private double attack;
     private double defence;
+    private String name;
 
     public Piotr() {
+        this.name = "Piotr";
         this.abilities = new ArrayList<Abilitable>();
     }
 
@@ -33,8 +35,13 @@ public class Piotr implements Slavable {
         defence = 20;
     }
 
+
     public double returnHitpoints() {
         return hitpoints;
+    }
+
+    public String returnName() {
+        return name;
     }
 
     public boolean isConscious () {

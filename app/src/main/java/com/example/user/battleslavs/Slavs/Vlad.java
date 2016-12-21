@@ -14,8 +14,10 @@ public class Vlad implements Slavable {
     private double hitpoints;
     private double attack;
     private double defence;
+    private String name;
 
     public Vlad() {
+        this.name = "Vlad";
         this.abilities = new ArrayList<Abilitable>();
     }
 
@@ -28,13 +30,18 @@ public class Vlad implements Slavable {
         this.assignAbility(new EquipAdidas());
         this.assignAbility(new AK47());
         this.assignAbility(new ShoutObscenities());
-        hitpoints = 240;
+        hitpoints = 200;
         attack = 18;
         defence = 18;
+
     }
 
     public double returnHitpoints() {
         return hitpoints;
+    }
+
+    public String returnName() {
+        return name;
     }
 
     public boolean isConscious () {

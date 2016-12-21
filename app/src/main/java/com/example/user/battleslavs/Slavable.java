@@ -9,6 +9,8 @@ import java.util.ArrayList;
  */
 public interface Slavable {
 
+    public String returnName();
+
     public double returnHitpoints();
 
     public boolean isConscious();

@@ -14,8 +14,10 @@ public class TestSlav implements Slavable {
     private double hitpoints;
     private double attack;
     private double defence;
+    private String name;
 
     public TestSlav() {
+        this.name = "TestSlav";
         this.abilities = new ArrayList<Abilitable>();
     }
 
@@ -59,5 +61,9 @@ public class TestSlav implements Slavable {
 
     public ArrayList<Abilitable> returnAbilities(){
         return abilities;
+    }
+
+    public String returnName() {
+        return name;
     }
 }
